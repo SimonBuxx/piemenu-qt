@@ -1,5 +1,5 @@
 /**
- * @file MainWindow.cpp
+ * @file MainWindow.h
  * @author Simon Buchholz
  * @date 9 Jan 2023
  * @brief Demo program for the PieMenuQt widget
