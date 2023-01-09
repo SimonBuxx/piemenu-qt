@@ -12,3 +12,7 @@ A simple pie menu QWidget implementation
 ![PieMenuQt Demo Program](https://github.com/SimonBuxx/piemenu-qt/blob/bcb807b93e545e65748bcaec6b2806e3200d1612/demo_program.png)
 
 *The demo program that allows setting of multiple parameters*
+
+![PieMenuQt Examples](https://github.com/SimonBuxx/piemenu-qt/blob/bcb807b93e545e65748bcaec6b2806e3200d1612/examples.png)
+
+*Multiple pie menus with different parameters*
