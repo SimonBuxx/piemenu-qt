@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
-    <normaloff>:/pie-chart-icon.png</normaloff>:/pie-chart-icon.png</iconset>
+    <normaloff>:/icons/pie-chart-icon.png</normaloff>:/icons/pie-chart-icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">

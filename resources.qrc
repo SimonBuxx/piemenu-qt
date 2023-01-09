@@ -1,9 +1,9 @@
 <RCC>
     <qresource prefix="/">
-        <file>close-line-icon.png</file>
-        <file>pushpin-icon.png</file>
-        <file>image-line-icon.png</file>
-        <file>image-line-icon-disabled.png</file>
-        <file>pie-chart-icon.png</file>
+        <file>icons/close-line-icon.png</file>
+        <file>icons/image-line-icon.png</file>
+        <file>icons/image-line-icon-disabled.png</file>
+        <file>icons/pie-chart-icon.png</file>
+        <file>icons/pushpin-icon.png</file>
     </qresource>
 </RCC>
