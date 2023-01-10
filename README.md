@@ -9,10 +9,6 @@ A simple pie menu QWidget implementation
  When the pin/unpin button is activated, the pie menu can be pinned
  to keep it open until it is manually or programmatically closed.
 
-![PieMenuQt Demo Program](https://github.com/SimonBuxx/piemenu-qt/blob/bcb807b93e545e65748bcaec6b2806e3200d1612/demo_program.png)
+![PieMenuQt Demo Program](https://github.com/SimonBuxx/piemenu-qt/blob/7e4a946fed9cf5e51bcf18e92de949e1a29b8cc5/images/pie_menu.gif)
 
-*The demo program that allows setting of multiple parameters*
-
-![PieMenuQt Examples](https://github.com/SimonBuxx/piemenu-qt/blob/b3c4c530401779e59f57047dd658a46d97ec6f32/examples.png)
-
-*Multiple pie menus with different parameters*
+*A demo program for the pie menu that allows setting of multiple parameters*
