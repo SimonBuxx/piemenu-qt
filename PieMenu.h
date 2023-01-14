@@ -35,11 +35,10 @@ public:
     /// Note: the position is mapped to the parent coordinate system
     void display();
 
-    /// \brief Sets the default and disabled icons of the pie buttons
+    /// \brief Sets the icon image of the pie button with the given index
     /// \param index: The index of the button
-    /// \param default_icon: Reference to the default icon
-    /// \param disabled_icon: Optional reference to an icon to display when the button is disabled
-    void setButtonIcons(uint8_t index, const QIcon& default_icon, const std::optional<QIcon> &disabled_icon = std::nullopt);
+    /// \param path: Reference to the path of the icon file
+    void setButtonIcon(uint8_t index, const QString& path);
 
     /// \brief Sets the icon of the close button
     /// \param icon: Reference to the icon
@@ -106,7 +105,7 @@ protected:
     int8_t getButtonUnderMouse(void) const;
 
     /// \brief Event handler to paint the widget
-    /// \param Pointer to the paint event
+    /// \param event: Pointer to the paint event
     void paintEvent(QPaintEvent *event) override;
 
     /// \brief Paints the custom-shaped pie menu buttons
@@ -125,24 +124,24 @@ protected:
     void paintPinButton(QPainter& painter, bool mouseover);
 
     /// \brief Event handler to process mouse clicks
-    /// \param Pointer to the mouse event
+    /// \param event: Pointer to the mouse event
     void mouseReleaseEvent(QMouseEvent *event) override;
 
     /// \brief Event handler to update on mouse press
-    /// \param Pointer to the mouse event
+    /// \param event: Pointer to the mouse event
     void mousePressEvent(QMouseEvent *event) override;
 
     /// \brief Event handler to update on mouse move
-    /// \param Pointer to the mouse event
+    /// \param event: Pointer to the mouse event
     void mouseMoveEvent(QMouseEvent *event) override;
 
     /// \brief Event handler to update when the mouse leaves the widget
-    /// \param Pointer to the mouse event
+    /// \param event: Pointer to the mouse event
     void leaveEvent(QEvent *event) override;
 
 protected:
     /// \brief The amount of pie buttons the pie menu will have
-    uint8_t button_count = 6;
+    uint8_t button_count = 4;
 
     /// \brief Vector containing the default icons for the pie buttons
     std::vector<QIcon> default_button_icons;

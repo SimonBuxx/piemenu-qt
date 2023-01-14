@@ -151,10 +151,21 @@ void PieMenu::setButtonEnabled(uint8_t index, bool enable)
     }
 }
 
-void PieMenu::setButtonIcons(uint8_t index, const QIcon& default_icon, const std::optional<QIcon> &disabled_icon)
+void PieMenu::setButtonIcon(uint8_t index, const QString& path)
 {
-    default_button_icons[index] = default_icon;
-    disabled_button_icons[index] = disabled_icon.value_or(QIcon());
+    default_button_icons[index] = QIcon(path);
+
+    // Create a semi-transparent disabled version
+    auto img = QImage(path);
+    img.convertTo(QImage::Format_ARGB32);
+    img.fill(Qt::transparent);
+
+    QPainter painter(&img);
+    painter.setCompositionMode(QPainter::CompositionMode_Source);
+    painter.setOpacity(0.2);
+    painter.drawImage(0, 0, QImage(path));
+
+    disabled_button_icons[index] = QIcon(QPixmap::fromImage(img));
 }
 
 void PieMenu::setCloseButtonIcon(const QIcon& icon)
@@ -167,9 +178,9 @@ void PieMenu::setPinButtonIcon(const QIcon& icon)
     pin_icon = icon;
 }
 
-void PieMenu::paintEvent(QPaintEvent *pEvent)
+void PieMenu::paintEvent(QPaintEvent *event)
 {
-    Q_UNUSED(pEvent);
+    Q_UNUSED(event);
 
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);

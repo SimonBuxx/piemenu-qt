@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
 
         for (int32_t i = 0; i < pos; i++)
         {
-            pie_menu->setButtonIcons(i, QIcon(":/icons/image-line-icon.png"), QIcon(":/icons/image-line-icon-disabled.png"));
+            pie_menu->setButtonIcon(i, ":/icons/image-line-icon.png");
         }
 
         pie_menu->update();
@@ -96,7 +96,7 @@ void MainWindow::initPieMenu()
 
     for (int32_t i = 0; i < 4; i++)
     {
-        pie_menu->setButtonIcons(i, QIcon(":/icons/image-line-icon.png"), QIcon(":/icons/image-line-icon-disabled.png"));
+        pie_menu->setButtonIcon(i, ":/icons/image-line-icon.png");
     }
 
     QObject::connect(pie_menu, &PieMenu::buttonClicked, this, [&](uint8_t index)
